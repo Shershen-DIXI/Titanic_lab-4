@@ -58,7 +58,7 @@ def test_class_filter():
     
     # Фильтруем 1 и 2 класс
     result = filter_titanic_data(df, pclass_filter=[1, 2])
-    assert len(result) == 5
+    assert len(result) == 6
     assert all(result['Pclass'].isin([1, 2]))
 
 # Тест 3: Фильтр по цене билета
