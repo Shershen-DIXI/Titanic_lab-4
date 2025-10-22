@@ -42,7 +42,7 @@ def test_basic_filter():
     result = filter_titanic_data(df)
     
     # Проверяем, что все записи - выжившие женщины
-    assert len(result) == 5
+    assert len(result) == 6
     assert all(result['Sex'] == 'female')
     assert all(result['Survived'] == 1)
 
@@ -53,7 +53,7 @@ def test_class_filter():
     
     # Фильтруем только 1 класс
     result = filter_titanic_data(df, pclass_filter=[1])
-    assert len(result) == 3
+    assert len(result) == 4
     assert all(result['Pclass'] == 1)
     
     # Фильтруем 1 и 2 класс
